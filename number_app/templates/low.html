@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>to low</title>
+</head>
+
+<body>
+    <div class="container_low">
+        <h1>No one rises to low expectation</h1>
+
+        <div class="low">
+            <h2>Too Low!</h2>
+            <form action="/check" method="post">
+                {% csrf_token %}
+                <input class="form-control" name=number type="number" placeholder="enter guess">
+                <button type="submit" class="btn btn-dark btn-block button mb-2">submit if you dare</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
